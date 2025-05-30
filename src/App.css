@@ -21,7 +21,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(6, 231, 6);
+  border-color: aliceblue;
 }
 
 .App-link {
@@ -35,4 +36,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Global styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* soft light background */
+  color: #555454; /* dark text for readability */
+  margin: 2;
+  padding: 20px;
+  border-color: #f0f4f8;
+}
+
+select, button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #61dafb;
+  background-color: rgb(143, 231, 143);
+  color: #282c34;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-color: aqua;
+}
+
+select:hover, button:hover {
+  background-color: #61dafb;
+  color: white;
 }
