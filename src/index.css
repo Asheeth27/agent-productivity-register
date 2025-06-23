@@ -1,55 +1,7 @@
-/* Reset & global */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #00205B; /* Nutun dark blue fallback */
-  color: white;
-}
-
-/* Main container with gradient background */
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  /* Nutun gradient */
-  background-image: linear-gradient(135deg, #00205B, #004880, #00B4A0);
-
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 20px;
-}
-
-/* Title style */
-.app-title {
-  font-weight: 800;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-}
-
-/* Form elements */
-select,
-button {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 2px solid #61dafb;
-  background-color: rgb(143, 231, 143);
-  color: #282c34;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-color: aqua;
-  margin: 0.5rem 0;
-}
-
-select:hover,
-button:hover {
-  background-color: #61dafb;
-  color: white;
 }

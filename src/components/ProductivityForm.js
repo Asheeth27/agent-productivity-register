@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const ProductivityForm = ({ onAddEntry }) => {
+const ProductivityForm = () => {
   const [entry, setEntry] = useState({
     agent: "",
     campaign: "",
     shift: "",
-    syn: "",          // added SYN here
+    syn: "",
   });
 
   const agents = ["Sahil Rajkumar", "Tyresse Pillay", "Nikhil Rajkumar", "Asheeth Batchulall"];
@@ -18,73 +18,79 @@ const ProductivityForm = ({ onAddEntry }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddEntry(entry);
-    setEntry({ agent: "", campaign: "", shift: "", syn: "" });  // reset SYN as well
+    console.log("Submitted Entry:", entry);
+    setEntry({ agent: "", campaign: "", shift: "", syn: "" });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-green-500 shadow-md rounded-xl p-6 space-y-6">
-      <h2 className="text-6xl font-semibold text-gray-700">Agent Productivity Entry</h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-2xl bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl shadow-lg space-y-6 text-left"
+    >
+      <div className="grid sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-gray-600 mb-2">Agent Name</label>
+          <label className="block mb-2 text-sm font-medium text-white">Agent Name</label>
           <select
             name="agent"
             value={entry.agent}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 rounded-lg bg-white bg-opacity-80 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           >
             <option value="">Select Agent</option>
             {agents.map((agent) => (
-              <option key={agent} value={agent}>{agent}</option>
+              <option key={agent} value={agent}>
+                {agent}
+              </option>
             ))}
           </select>
         </div>
 
         <div>
-          <label className="block text-gray-600 mb-2">Campaign</label>
+          <label className="block mb-2 text-sm font-medium text-white">Campaign</label>
           <select
             name="campaign"
             value={entry.campaign}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 rounded-lg bg-white bg-opacity-80 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           >
             <option value="">Select Campaign</option>
             {campaigns.map((campaign) => (
-              <option key={campaign} value={campaign}>{campaign}</option>
+              <option key={campaign} value={campaign}>
+                {campaign}
+              </option>
             ))}
           </select>
         </div>
 
         <div>
-          <label className="block text-gray-800 mb-7">Shift</label>
+          <label className="block mb-2 text-sm font-medium text-white">Shift</label>
           <select
             name="shift"
             value={entry.shift}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 rounded-lg bg-white bg-opacity-80 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           >
             <option value="">Select Shift</option>
             {shifts.map((shift) => (
-              <option key={shift} value={shift}>{shift}</option>
+              <option key={shift} value={shift}>
+                {shift}
+              </option>
             ))}
           </select>
         </div>
 
-        {/* New SYN text input field */}
         <div>
-          <label className="block text-gray-600 mb-2">SYN</label>
+          <label className="block mb-2 text-sm font-medium text-white">SYN</label>
           <input
             type="text"
             name="syn"
             value={entry.syn}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter SYN value"
+            className="w-full p-3 rounded-lg bg-white bg-opacity-80 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -93,7 +99,7 @@ const ProductivityForm = ({ onAddEntry }) => {
       <div className="text-right">
         <button
           type="submit"
-          className="bg-black hover:bg-blue-700 text-green px-6 py-2 rounded-lg transition duration-200"
+          className="px-6 py-3 rounded-lg bg-[#00B4A0] hover:bg-[#007d73] text-white font-semibold transition duration-300"
         >
           Submit
         </button>
