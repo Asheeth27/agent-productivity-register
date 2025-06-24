@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/agent-productivity-register/static/css/main.ca3e1363.css",
-    "main.js": "/agent-productivity-register/static/js/main.f4049275.js",
+    "main.js": "/agent-productivity-register/static/js/main.982e5f10.js",
     "index.html": "/agent-productivity-register/index.html",
     "main.ca3e1363.css.map": "/agent-productivity-register/static/css/main.ca3e1363.css.map",
-    "main.f4049275.js.map": "/agent-productivity-register/static/js/main.f4049275.js.map"
+    "main.982e5f10.js.map": "/agent-productivity-register/static/js/main.982e5f10.js.map"
   },
   "entrypoints": [
     "static/css/main.ca3e1363.css",
-    "static/js/main.f4049275.js"
+    "static/js/main.982e5f10.js"
   ]
 }
